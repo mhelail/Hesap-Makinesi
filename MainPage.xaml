@@ -3,7 +3,7 @@
              x:Class="HesapMakinesi.MainPage">
 
     <Grid Padding="20" RowSpacing="10" ColumnSpacing="10">
-       
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -41,10 +41,11 @@
         <Button Text="3" Grid.Row="3" Grid.Column="2" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
         <Button Text="-" Grid.Row="3" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="LightBlue"/>
 
-        <Button Text="C" Grid.Row="6" Grid.Column="0" Clicked="OnClearClicked" BackgroundColor="LightBlue"/>
+        <Button Text="C" Grid.Row="4" Grid.Column="0" Clicked="OnClearClicked" BackgroundColor="LightBlue"/>
         <Button Text="0" Grid.Row="4" Grid.Column="1" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
-        <Button Text="." Grid.Row="6" Grid.Column="1" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
-        <Button Text="=" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Clicked="OnCalculateClicked" BackgroundColor="LightBlue"/>
+        <Button Text="." Grid.Row="4" Grid.Column="2" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
         <Button Text="+" Grid.Row="4" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="LightBlue"/>
+
+        <Button Text="=" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Clicked="OnCalculateClicked" BackgroundColor="LightBlue"/>
     </Grid>
 </ContentPage>
