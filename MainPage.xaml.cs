@@ -14,7 +14,7 @@ namespace HesapMakinesi
             InitializeComponent();
         }
 
-        
+        // Method to handle digit button clicks
         private void OnDigitClicked(object sender, EventArgs e)
         {
             Button button = sender as Button;
@@ -25,21 +25,21 @@ namespace HesapMakinesi
             }
         }
 
-       
+        // Method to handle operation button clicks
         private void OnOperatorClicked(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            if (button != null && double.TryParse(currentEntry, out firstNumber))
+            if (button != null && double.TryParse(currentEntry.Replace(',', '.'), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out firstNumber))
             {
                 currentOperation = button.Text;
                 currentEntry = string.Empty;
             }
         }
 
-        
+        // Method to handle the equals button click
         private void OnCalculateClicked(object sender, EventArgs e)
         {
-            if (double.TryParse(currentEntry, out double secondNumber))
+            if (double.TryParse(currentEntry.Replace(',', '.'), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double secondNumber))
             {
                 double result = 0;
                 switch (currentOperation)
@@ -71,7 +71,7 @@ namespace HesapMakinesi
             }
         }
 
-        
+        // Method to handle the clear button click
         private void OnClearClicked(object sender, EventArgs e)
         {
             currentEntry = string.Empty;
