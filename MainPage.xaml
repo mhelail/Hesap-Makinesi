@@ -3,7 +3,7 @@
              x:Class="HesapMakinesi.MainPage">
 
     <Grid Padding="20" RowSpacing="10" ColumnSpacing="10">
-        
+        <!-- Define Rows and Columns -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -20,11 +20,12 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        
+        <!-- Display for the Calculator -->
         <Entry x:Name="Display" Grid.Row="0" Grid.ColumnSpan="4" 
                FontSize="32" HorizontalOptions="FillAndExpand"
                VerticalOptions="CenterAndExpand" IsReadOnly="True" />
 
+        <!-- Number and Operation Buttons -->
         <Button Text="7" Grid.Row="1" Grid.Column="0" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
         <Button Text="8" Grid.Row="1" Grid.Column="1" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
         <Button Text="9" Grid.Row="1" Grid.Column="2" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
@@ -40,12 +41,10 @@
         <Button Text="3" Grid.Row="3" Grid.Column="2" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
         <Button Text="-" Grid.Row="3" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="LightBlue"/>
 
-        <Button Text="C" Grid.Row="4" Grid.Column="0" Clicked="OnClearClicked" BackgroundColor="LightBlue"/>
+        <Button Text="C" Grid.Row="6" Grid.Column="0" Clicked="OnClearClicked" BackgroundColor="LightBlue"/>
         <Button Text="0" Grid.Row="4" Grid.Column="1" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
-        <Button Text="+" Grid.Row="4" Grid.Column="2" Clicked="OnOperatorClicked" BackgroundColor="LightBlue"/>
-        <Button Text="=" Grid.Row="4" Grid.Column="3" Clicked="OnCalculateClicked" BackgroundColor="LightBlue"/>
-       
-        
-       
+        <Button Text="." Grid.Row="6" Grid.Column="1" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="=" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Clicked="OnCalculateClicked" BackgroundColor="LightBlue"/>
+        <Button Text="+" Grid.Row="4" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="LightBlue"/>
     </Grid>
 </ContentPage>
