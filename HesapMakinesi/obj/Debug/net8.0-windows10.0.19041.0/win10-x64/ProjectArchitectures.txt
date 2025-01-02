@@ -1,0 +1,1 @@
+E:\PROJECTodev\HesapMakinesi\HesapMakinesi\HesapMakinesi.csproj;x64
